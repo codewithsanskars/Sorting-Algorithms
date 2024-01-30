@@ -1,0 +1,34 @@
+def swap(ar,i,j):
+    temp=ar[i]
+    ar[i]=ar[j]
+    ar[j]=temp
+    
+def bubble():
+    n=int(input("Enter a number"))
+    li=[]
+    for i in range(n):
+        k=int(input("Enter List item"))
+        li.append(k)
+    print(li)
+    for j in range(n):
+        for i in range(0,n-j-1):
+           if li[i+1]<li[i]:
+             swap(li,i,i+1)
+    print(li)
+    q=input(print("Press 1 to start again, any other to exit"))
+    if q=='1':
+        bubble()
+    else:
+        print("Thankyou for using")    
+        
+        
+print("Hello there, Welcome to the simplest Sorting technique that is Bubble Sort!")
+print("Bubble sort is very rarely used in practical world as it has time complexity of n square, It's majorly used in educational purposes ")
+
+def main():
+    g=input(print("Press 1 to start, any other to exit"))
+    if g=='1':
+        bubble()
+    else:
+        print("Thankyou for using")
+main()
